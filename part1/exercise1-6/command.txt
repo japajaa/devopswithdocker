@@ -1,0 +1,3 @@
+PS C:\work\devopswithdocker\part1\exercise1-6> docker build -t docker-clock .
+
+PS C:\work\devopswithdocker\part1\exercise1-6> docker run docker-clock
