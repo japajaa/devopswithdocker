@@ -1,0 +1,5 @@
+C:\Users\jarrepo>docker container ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+47f11fe49d85        nginx               "nginx -g 'daemon of…"   48 seconds ago      Exited (0) 21 seconds ago                       elastic_bardeen
+2ee26d58f448        nginx               "nginx -g 'daemon of…"   50 seconds ago      Up 49 seconds               80/tcp              hardcore_margulis
+c4a66efd20ea        nginx               "nginx -g 'daemon of…"   52 seconds ago      Exited (0) 16 seconds ago                       focused_carson

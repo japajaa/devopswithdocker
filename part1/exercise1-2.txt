@@ -1,0 +1,7 @@
+C:\Users\jarrepo>docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+C:\Users\jarrepo>docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+C:\Users\jarrepo>
