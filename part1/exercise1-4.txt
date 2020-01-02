@@ -1,0 +1,16 @@
+PS C:\Users\jarrepo> docker run devopsdockeruh/exec_bash_exercise
+
+PS C:\Users\jarrepo> docker container ls
+CONTAINER ID        IMAGE                               COMMAND             CREATED              STATUS              PORTS               NAMES
+a19619973905        devopsdockeruh/exec_bash_exercise   "node index"        About a minute ago   Up About a minute                       flamboyant_jackson
+
+PS C:\Users\jarrepo> docker exec -it flamboyant_jackson bash
+root@a19619973905:/usr/app# tail -f ./logs.txt
+Secret message is:
+"Docker is easy"
+Thu, 02 Jan 2020 11:43:04 GMT
+Thu, 02 Jan 2020 11:43:07 GMT
+Thu, 02 Jan 2020 11:43:10 GMT
+Thu, 02 Jan 2020 11:43:13 GMT
+Secret message is:
+"Docker is easy"

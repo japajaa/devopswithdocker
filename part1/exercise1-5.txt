@@ -1,0 +1,22 @@
+PS C:\Users\jarrepo> docker run -dit --name exercise1-5 ubuntu:16.04
+e18c838d21d3f0f9cf9a03fe42179e273f0e454e6cdaa15b6db35ac8cc068d55
+PS C:\Users\jarrepo> docker exec -it exercise1-5 bash
+
+...
+root@e18c838d21d3:/# apt update
+root@e18c838d21d3:/# apt install curl
+Do you want to continue? [Y/n] Y
+root@e18c838d21d3:/# exit
+...
+
+PS C:\Users\jarrepo> docker exec -it exercise1-5 sh -c 'echo \"Input website:\"; read website; echo \"Searching..\"; sleep 1; curl http://$website;'               Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+PS C:\Users\jarrepo>
