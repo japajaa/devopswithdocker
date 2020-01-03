@@ -1,0 +1,7 @@
+PS C:\work\devopswithdocker\part1\exercise1-13> docker run -p 8080 exercise1-13
+
+PS C:\Users\jarrepo> docker container ls
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                     NAMES
+f8769651950c        exercise1-13        "/bin/sh -c 'java -j…"   33 seconds ago      Up 32 seconds       0.0.0.0:32768->8080/tcp   vibrant_booth
+
+use browser to access url: http://localhost:32768/
