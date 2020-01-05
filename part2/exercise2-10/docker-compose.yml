@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  exercise2-10-frontend:
+    image: frontend
+    build: .
+    ports:
+      - 5000:5000
+    environment:
+      - API_URL=http://localhost/api/
+  exercise2-10-backend:
+    image: backend
+    build: .
+    ports:
+      - 8000:8000
+    environment:
+      - REDIS=redis
+      - DB_USERNAME=kalle
+      - DB_PASSWORD=kikkeli
+      - DB_HOST=postgres
+    restart: unless-stopped
+  redis:
+    image: redis
+    build: .
+  postgres:
+    image: postgres
+    build: .
+    environment:
+      - POSTGRES_USER=kalle
+      - POSTGRES_PASSWORD=kikkeli
+    volumes:
+      #- ./database:/var/lib/postgresql/data
+      - postgresdb:/var/lib/postgresql/data
+  nginx:
+    image: nginx
+    build: .
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+volumes:
+  postgresdb:

@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  kurkku-frontend:
+    image: kurkku-frontend
+    build: .
+    ports:
+      - 3000:3000
+  kurkku-backend:
+    image: kurkku-backend
+    build: .
+    ports:
+      - 5000:5000
+    volumes:
+      - model:/src/model
+    depends_on:
+      - kurkku-training
+    restart: unless-stopped
+  kurkku-training:
+    image: kurkku-training
+    build: .
+    volumes:
+      - images:/src/imgs
+      - model:/src/model
+volumes:
+  images:
+  model:
