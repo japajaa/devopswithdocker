@@ -1,15 +1,15 @@
 version: "3"
 
 services:
-  exercise2-3-frontend:
-    image: frontend
+  exercise3-1-frontend:
+    image: frontend-optimized
     build: .
     environment:
       - API_URL=http://localhost:8000
     ports:
       - 5000:5000
-  exercise2-3-backend:
-    image: backend
+  exercise3-1-backend:
+    image: backend-optimized
     build: .
     environment:
       - FRONT_URL=http://localhost:5000

@@ -4,11 +4,15 @@ services:
   exercise2-5-frontend:
     image: frontend
     build: .
+    environment:
+      - API_URL=http://localhost:8000
     ports:
       - 5000:5000
   exercise2-5-backend:
     image: backend
     build: .
+    environment:
+      - FRONT_URL=http://localhost:5000
     ports:
       - 8000:8000
     environment:
