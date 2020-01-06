@@ -1,0 +1,5 @@
+REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
+frontend-node-alpine                    latest              db81a80f3e7e        4 minutes ago       267MB
+backend-node-alpine                     latest              21fd6e4c0106        8 minutes ago       170MB
+frontend-no-root                        latest              4a2ec0a16193        17 minutes ago      429MB
+backend-no-root                         latest              c7bd99cad63c        23 minutes ago      333MB

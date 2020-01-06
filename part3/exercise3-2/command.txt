@@ -1,0 +1,1 @@
+PS C:\work\devopswithdocker\part3\exercise3-4> docker run -it -v $pwd/:/yle-dl yle-dl https://areena.yle.fi/1-50288907
