@@ -5,4 +5,4 @@ services:
     image: devopsdockeruh/ports_exercise
     build: .
     ports:
-      - 666:80
+      - 80:80

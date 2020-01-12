@@ -1,0 +1,7 @@
+To get all buttons to work after adding nginx, i had to change frontend's API_URL environment value in the docker-compose.yml.
+
+before:
+      - API_URL=http://localhost:8000
+
+after:
+      - API_URL=http://localhost/api/
